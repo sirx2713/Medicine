@@ -58,7 +58,7 @@ class _LoginState extends State<Login> {
                     });
                   },
                   child: Text(
-                    "sign up".toUpperCase(),
+                    "sign Up".toUpperCase(),
                     style: TextStyle(
                         color: fontColor2,
                         fontWeight: fontStrength2,
