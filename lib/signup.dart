@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
 import 'login.dart';
 
 class Signup extends StatefulWidget {
@@ -178,22 +179,31 @@ class _SignupState extends State<Signup> {
             const SizedBox(
               height: 50,
             ),
-            Material(
-              elevation: 5,
-              borderRadius: BorderRadius.circular(30),
-              child: Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.only(left: 15),
-                height: 60,
-                width: 350,
-                decoration: BoxDecoration(
-                    color: Colors.red, borderRadius: BorderRadius.circular(30)),
-                child: Text(
-                  "Sign up".toUpperCase(),
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+                setState(() {
+
+                });
+              },
+
+              child: Material(
+                elevation: 5,
+                borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.only(left: 15),
+                  height: 60,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Colors.red, borderRadius: BorderRadius.circular(30)),
+                  child: Text(
+                    "Sign up".toUpperCase(),
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ),

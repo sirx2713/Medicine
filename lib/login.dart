@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medical_services/signup.dart';
 
+import 'home.dart';
+
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -117,22 +119,30 @@ class _LoginState extends State<Login> {
             const SizedBox(
               height: 50,
             ),
-            Material(
-              elevation: 5,
-              borderRadius: BorderRadius.circular(30),
-              child: Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.only(left: 15),
-                height: 60,
-                width: 350,
-                decoration: BoxDecoration(
-                    color: Colors.red, borderRadius: BorderRadius.circular(30)),
-                child: Text(
-                  "log in".toUpperCase(),
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+                setState(() {
+
+                });
+              },
+              child: Material(
+                elevation: 5,
+                borderRadius: BorderRadius.circular(30),
+                child: Container(
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.only(left: 15),
+                  height: 60,
+                  width: 350,
+                  decoration: BoxDecoration(
+                      color: Colors.red, borderRadius: BorderRadius.circular(30)),
+                  child: Text(
+                    "log in".toUpperCase(),
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ),
